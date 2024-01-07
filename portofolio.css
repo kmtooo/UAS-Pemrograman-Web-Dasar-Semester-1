@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,300;1,400;1,500&family=Righteous&display=swap");
+
+body {
+  font-family: Poppins;
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 13px;
+  background-color: #23282e;
+  color: #eee;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
+  margin-top: 10px;
+  transition: all 0.8s;
+}
+
+header nav a {
+  color: #fff;
+  font-size: small;
+  margin: 0 30px;
+  transition: 0.5s;
+}
+
+header nav a:hover {
+  color: #929191;
+}
+
+.tab {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-size: 50%;
+}
+
+.tab .container {
+  width: 1140px;
+  max-width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  box-sizing: border-box;
+  margin: auto;
+  position: relative;
+}
+/* Introduction */
+#intro {
+  background-color: #16222d;
+}
+
+#intro .avatar {
+  text-align: right;
+  height: 100%;
+}
+
+#intro .avatar img {
+  height: 100%;
+  filter: saturate(0.5);
+}
+
+#intro .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  width: 700px;
+  max-width: 90%;
+}
+
+#intro .content .name,
+#intro .content .job {
+  font-size: 6em;
+  font-family: Righteous;
+  line-height: 1em;
+}
+
+.text-gradien {
+  background-image: linear-gradient(to right, #e4454a, #ca3ea7);
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#intro .content .des {
+  margin-top: 1.2em;
+  width: 70%;
+}
+
+#intro .content a {
+  margin-top: 1.2em;
+}
+
+#intro .content i {
+  font-size: 7em;
+  color: #293b4c;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+}
+
+/* Experience */
+#experience {
+  background-image: linear-gradient(45deg, #212632, #242a34, #3c4c5a);
+  background-size: cover;
+}
+
+#experience .list {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  justify-content: left;
+  padding-left: 50px;
+  box-sizing: border-box;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+#experience .list .item {
+  width: 200px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-rows: 1fr 50px 1fr;
+  gap: 20px;
+}
+
+#experience .list .item i {
+  background-color: #444b57;
+  width: 50px;
+  font-size: 2em;
+  color: #16222d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#experience .list .item .time {
+  font-size: large;
+  display: flex;
+  align-items: end;
+}
+
+#experience .list .item .content .job {
+  font-size: large;
+}
+
+#experience .list .item .content .company {
+  color: #e4454a;
+}
+
+#experience .list .item .content .des {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+#experience .list .item:nth-child(odd) .content {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#experience .list .item:nth-child(odd) .time {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-items: start;
+}
+
+#experience .list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #444b57;
+  z-index: -1;
+}
+
+#experience .container {
+  overflow: auto;
+}
+
+/* Skills */
+#skills {
+  background-image: linear-gradient(45deg, #3a2530, #171514, #412726);
+  background-size: cover;
+}
+
+#skills .list {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px;
+  box-sizing: border-box;
+  gap: 0;
+}
+
+#skills .list .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#skills .list .item:nth-child(odd) {
+  background-color: #3f2525;
+}
+
+#skills .list .item i {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  color: #ca3ea7;
+  font-size: 2em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px #0005;
+}
+
+#skills .list .item .name {
+  font-size: 1.5em;
+  margin-top: 0.7em;
+}
+
+#skills .list .des {
+  font-size: small;
+  opacity: 0.8;
+}
+
+/* Testimoni */
+#testi {
+  background-color: #b37a7a;
+  color: #444b57;
+  padding-top: 50px;
+  height: auto;
+}
+
+#testi .list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+#testi .list .item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#testi .list .item {
+  border-radius: 30px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+#testi .list .item .index {
+  font-weight: bold;
+  font-size: 1.5em;
+  position: absolute;
+  transform: translateY(-100%);
+  background-color: #fff;
+  padding: 10px;
+  font-style: italic;
+  border-top-right-radius: 20px;
+}
+
+#testi .list .name {
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;
+}
+
+#testi .list .item .des {
+  padding: 0 10px 10px 10px;
+  font-size: small;
+  max-height: 25%;
+  height: 100px;
+}
+
+#testi .list .item .author {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+#testi .list .item .job {
+  font-weight: bold;
+}
+
+#testi .container {
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Contact */
+#contact {
+  background-color: #242330;
+}
+
+#contact .thank {
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+#contact .des {
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#contact .list {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+#contact .list .item {
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+#contact .list .item a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#contact .list .item a:hover {
+  color: #929191;
+}
+
+@media screen and (max-width: 991px) {
+  #intro .avatar img {
+    transform: translateX(200px);
+  }
+
+  #intro .content .name,
+  #intro .content .job {
+    font-size: 5em;
+    font-family: Righteous;
+    line-height: 1em;
+    max-width: 80%;
+    width: 100%;
+  }
+
+  #intro .content i {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 10px;
+  }
+
+  header {
+    margin-top: 1.5rem;
+  }
+
+  header nav a {
+    margin: 10px;
+    font-size: 10px;
+  }
+
+  #intro .avatar img {
+    transform: none;
+  }
+
+  #intro .content {
+    left: 20px;
+  }
+
+  #intro .content .name {
+    font-size: 4em;
+  }
+
+  #intro .content i {
+    position: unset;
+  }
+
+  #skills .list {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #skills .list .item:nth-child(odd) {
+    background-color: unset;
+  }
+
+  #skills .list .item:nth-child(2),
+  #skills .list .item:nth-child(3n) {
+    background-color: #3f2525;
+  }
+
+  #testi .list {
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  #testi .list .item img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #intro .avatar img {
+    transform: translateX(110px);
+  }
+
+  #intro .content {
+    left: 20px;
+  }
+
+  #intro .content .name {
+    font-size: 3em;
+  }
+
+  #intro .content .name,
+  #intro .content .job {
+    font-size: 4em;
+    font-family: Righteous;
+    line-height: 1.1em;
+  }
+
+  #intro .content .des {
+    margin-top: 1.2em;
+    width: 50%;
+  }
+
+  #intro .content i {
+    position: unset;
+  }
+
+  #testi .list{
+    padding: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    height: 90rem;
+  }
+
+  #testi .author,
+  #testi .job,
+  #testi .time {
+    display: none;
+  }
+
+  #testi .list .item img{
+    height: 150px;
+  }
+
+
+  #skills .list .des {
+    font-size: 10px;
+  }
+
+  #contact .thank {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  #contact .des {
+    width: 500px;
+    max-width: 120%;
+    text-align: center;
+    margin-bottom: -2rem;
+  }
+
+  #contact .list {
+    text-align: center;
+    margin-bottom: -4rem;
+  }
+}
+
+.tab {
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1;
+}
+
+#intro {
+  z-index: 2;
+}
+
+.tab.active {
+  --x: 50%;
+  --y: 50%;
+  clip-path: circle(0 at var(--x) var(--y));
+
+  animation: showTab 1s ease-in-out 1 forwards;
+}
+
+@keyframes showTab {
+  to {
+    clip-path: circle(200% at var(--x) var(--y));
+  }
+}
